@@ -5,6 +5,7 @@
 
 ### Table of Contents
 **[1way-2way](#1way-2way)**<br>
+**[Filter/Sort-change-server/client-mode](#1way-2way)**<br>
 
 ## 1way 2way
 
@@ -14,4 +15,17 @@ var mParameters = {
    defaultOperationMode: "Client" ("Server" depending on requirement)
    defaultCountMode: sap.ui.model.odata.CountMode.None
 };
+</pre>
+
+## Filter/Sort change server/client mode
+
+<pre>
+  var oList = this.getView().byId("id_vepdvlistTab");
+  var oBinding = oList.getBinding("items");
+  if (oBinding.aAllKeys === null) {
+   oBinding.sOperationMode = "Client";
+   oBinding.aAllKeys = oBinding.aKeys;
+  }
+  oBinding.aApplicationFilters = aFilters;
+  oBinding.filter(aFilters, "Applications");
 </pre>
