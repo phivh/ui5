@@ -5,8 +5,8 @@
 
 ### Table of Contents
 1. **[1way 2way](#1way-2way)**<br>
-2. **[Filter/Sort change Server/Client Mode](#Filter/Sort-change-Server/Client-mode)**<br>
-3. **[Sort NUMC Field](#Sort-NUMC-field)**<br>
+2. **[Filter/Sort change Server/Client Mode](#filtersort-change-serverclient-mode)**<br>
+3. **[Sort NUMC Field](#sort-nunc-field)**<br>
 
 ## 1way 2way
 
