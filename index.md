@@ -4,8 +4,9 @@
 >First hint: How to be a god Ui5 developer? Drink 5 glasses of beer everyday.
 
 ### Table of Contents
-1.**[1way-2way](#1way-2way)**<br>
-2.**[Filter/Sort-change-server/client-mode](#1way-2way)**<br>
+1. **[1way 2way](#1way-2way)**<br>
+2. **[Filter/Sort change Server/Client Mode](#Filter/Sort-change-Server/Client-mode)**<br>
+3. **[Sort NUMC Field](#Sort-NUMC-field)**<br>
 
 ## 1way 2way
 
@@ -17,7 +18,7 @@ var mParameters = {
 };
 </pre>
 
-## Filter/Sort change server/client mode
+## Filter/Sort change Server/Client mode
 
 <pre>
   var oList = this.getView().byId("id_vepdvlistTab");
@@ -28,4 +29,37 @@ var mParameters = {
   }
   oBinding.aApplicationFilters = aFilters;
   oBinding.filter(aFilters, "Applications");
+</pre>
+
+## Sort NUMC Field
+
+<pre>
+  oSorter = new sap.ui.model.Sorter("Lifnr", false, false);
+   oSorter.fnCompare = function(value1, value2) {
+    return oThis.compareIntegers(value1, value2);
+   };
+   this.getView().byId('id_vendorlist').getBinding('items').sort([oSorter]);
+
+
+/*Compare integers */
+ compareIntegers: function(value1, value2) {
+  if ((value1 == null || value1 == undefined || value1 == '') && (value2 == null || value2 == undefined || value2 == '')) {
+   return 0;
+  }
+  if ((value1 == null || value1 == undefined || value1 == '')) {
+   return -1;
+  }
+  if ((value2 == null || value2 == undefined || value2 == '')) {
+   return 1;
+  }
+  if (parseInt(value1) < parseInt(value2)) {
+   return -1;
+  }
+  if (parseInt(value1) == parseInt(value2)) {
+   return 0;
+  }
+  if (parseInt(value1) > parseInt(value2)) {
+   return 1;
+  }
+ }
 </pre>
