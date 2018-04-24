@@ -4,8 +4,8 @@
 >First hint: How to be a god Ui5 developer? Drink 5 glasses of beer everyday.
 
 ### Table of Contents
-**[1way-2way](#1way-2way)**<br>
-**[Filter/Sort-change-server/client-mode](#1way-2way)**<br>
+1.**[1way-2way](#1way-2way)**<br>
+2.**[Filter/Sort-change-server/client-mode](#1way-2way)**<br>
 
 ## 1way 2way
 
