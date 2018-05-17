@@ -71,3 +71,27 @@ var mParameters = {
    oThis._oRb = sap.ui.getCore().getLibraryResourceBundle("sap.ui.comp");
    oThis._sTableTitle = oThis._oRb.getText("XXXTEXT");
 </pre>
+
+## Custom Data
+In xml
+------
+<pre>
+ <Button icon="sap-icon://activities" type="Transparent" press="onTaskListPress" ariaLabelledBy="TaskListButtonLabel">
+   <customData><core:CustomData key="OrderNo" value="{detailView>SER_ORDER_NO}"/></customData>
+ </Button>
+</pre>
+In control
+------
+<pre>
+customData: [{
+  Type:"sap.ui.core.CustomData",
+    key:"coords",
+    value:"{data}" // bind custom data
+  },
+  {
+  Type:"sap.ui.core.CustomData",
+    key:"coords",
+    value:"{data}" // bind custom data
+  }]
+ </pre>
+[SAPUI5 Custom Data](https://sapui5.hana.ondemand.com/#/api/sap.ui.core.CustomData/)
