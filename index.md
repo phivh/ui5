@@ -7,6 +7,7 @@
 1. **[1way 2way](#1way-2way)**<br>
 2. **[Filter/Sort change Server/Client Mode](#filtersort-change-serverclient-mode)**<br>
 3. **[Sort NUMC Field](#sort-numc-field)**<br>
+4. **[Reuse Library Resource Bundle](#reuse-library-resource-bundle)**<br>
 
 ## 1way 2way
 
@@ -62,4 +63,11 @@ var mParameters = {
    return 1;
   }
  }
+</pre>
+
+## Reuse Library Resource Bundle
+
+<pre>
+   oThis._oRb = sap.ui.getCore().getLibraryResourceBundle("sap.ui.comp");
+   oThis._sTableTitle = oThis._oRb.getText("XXXTEXT");
 </pre>
