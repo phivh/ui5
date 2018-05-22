@@ -1,6 +1,8 @@
 # UI5 ![alt text](https://sapui5.hana.ondemand.com/resources/sap/ui/documentation/sdk/images/logo_ui5.png "SAPUI5")
 [Markdown CheatSheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
+Move to Gitbook : https://www.gitbook.com/invite/ui5?invite=-LD4vjBYOYA2FBJBbnc-
+
 >First hint: How to be a god Ui5 developer? Drink 5 glasses of beer everyday.
 
 ### Table of Contents
