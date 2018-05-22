@@ -9,6 +9,7 @@
 3. **[Sort NUMC Field](#sort-numc-field)**<br>
 4. **[Reuse Library Resource Bundle](#reuse-library-resource-bundle)**<br>
 5. **[Custom Data](#custom-data)**<br>
+6. **[OdataModel Custom Header](#odatamodel-custom-header)**<br>
 
 ## 1way 2way
 
@@ -75,14 +76,14 @@ var mParameters = {
 
 ## Custom Data
 In xml
-------
+
 ```
  <Button icon="sap-icon://activities" type="Transparent" press="onTaskListPress" ariaLabelledBy="TaskListButtonLabel">
    <customData><core:CustomData key="OrderNo" value="{detailView>SER_ORDER_NO}"/></customData>
  </Button>
 ```
 In control
-------
+
 ```
 customData: [{
   Type:"sap.ui.core.CustomData",
@@ -96,3 +97,20 @@ customData: [{
   }]
 ```
 [SAPUI5 Custom Data](https://sapui5.hana.ondemand.com/#/api/sap.ui.core.CustomData/)
+
+## OdataModel Custom Header
+
+<pre>
+   manifest.json
+   "models": {
+			"": {
+				"dataSource": "mainService",
+				"preload": false,
+				"settings": {
+					"headers": {
+						"ABC": "XYZ"
+					}
+				}
+			}
+		}
+</pre>
